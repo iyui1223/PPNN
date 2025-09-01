@@ -1,27 +1,27 @@
-# Ignore all .npy files (simulation data)
+# Ignore all executable, binary and data files
 *.npy
 *.npz
-
-# Ignore all executable files
 *.bin
+Data/
 
-# Ignore all log files
-*.log
+# log files
+*.out
 *.err
+*.log
 
-# Ignore the temporary work directory
+# Temporary work directory
 Work/
 workdir/
 .ipynb_checkpoints/
 Viewer/
 
-# Ignore OpenIFS original files
+# OpenIFS original files
 org/ 
 
-# Ignore hidden system files (Mac and Linux)
+# Hidden system files (Mac and Linux)
 .DS_Store
 Thumbs.
 .ipynb_checkpoints
 
-# Ignore NFS temporary files
+# NFS temporary files
 .nfs*
