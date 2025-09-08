@@ -1,0 +1,84 @@
+openifs-expt/
+└── 48r1
+    ├── scm-ancillary
+    │   ├── aerosol_cams_climatology_43R3a.nc
+    │   ├── aerosol_cams_climatology_43R3.nc
+    │   ├── aerosol_ifs_rrtm_42R1.nc
+    │   ├── aerosol_ifs_rrtm_43R1a.nc
+    │   ├── aerosol_ifs_rrtm_43R1.nc
+    │   ├── aerosol_ifs_rrtm_43R3.nc
+    │   ├── aerosol_ifs_rrtm_45R2.nc
+    │   ├── aerosol_ifs_rrtm_46R1.nc
+    │   ├── aerosol_ifs_rrtm_46R1_with_NI_AM.nc
+    │   ├── aerosol_ifs_rrtm_48R1_v2.nc
+    │   ├── aerosol_ifs_rrtm_AB.nc
+    │   ├── aerosol_ifs_rrtm.nc
+    │   ├── aerosol_ifs_rrtm_tegen.nc
+    │   ├── baran_ice_scattering_rrtm.nc
+    │   ├── C11CLIM
+    │   ├── C12CLIM
+    │   ├── C22CLIM
+    │   ├── CCL4CLIM
+    │   ├── CH4CLIM
+    │   ├── CO2CLIM
+    │   ├── ECOZC
+    │   ├── es_droplet_scattering_rrtm.nc
+    │   ├── fu_ice_scattering_rrtm.nc
+    │   ├── GCH4CLIM
+    │   ├── GCO2CLIM
+    │   ├── GOZOCLIM
+    │   ├── greenhouse_gas_climatology_46r1.nc
+    │   ├── greenhouse_gas_climatology_48r1.nc
+    │   ├── greenhouse_gas_timeseries_CMIP6_SSP370_CFC11equiv_47r1.nc
+    │   ├── MCH4CLIM
+    │   ├── MCICA
+    │   ├── mcica_gamma.nc
+    │   ├── mcica_lognormal.nc
+    │   ├── MCO2CLIM
+    │   ├── MOZOCLIM
+    │   ├── N2OCLIM
+    │   ├── namelist_extra
+    │   ├── NO2CLIM
+    │   ├── OZOCLIM
+    │   ├── RADRRTM
+    │   ├── RADSRTM
+    │   ├── slingo_droplet_scattering_rrtm.nc
+    │   ├── SO4_A1B2000
+    │   ├── SO4_A1B2010
+    │   ├── SO4_A1B2020
+    │   ├── SO4_A1B2030
+    │   ├── SO4_A1B2040
+    │   ├── SO4_A1B2050
+    │   ├── SO4_A1B2060
+    │   ├── SO4_A1B2070
+    │   ├── SO4_A1B2080
+    │   ├── SO4_A1B2090
+    │   ├── SO4_A1B2100
+    │   ├── SO4_OBS1920
+    │   ├── SO4_OBS1930
+    │   ├── SO4_OBS1940
+    │   ├── SO4_OBS1950
+    │   ├── SO4_OBS1960
+    │   ├── SO4_OBS1970
+    │   ├── SO4_OBS1980
+    │   ├── SO4_OBS1990
+    │   ├── socrates_droplet_scattering_rrtm.nc
+    │   ├── total_solar_irradiance_CMIP6_47r1.nc
+    │   ├── vtable_L137
+    │   └── vtable_L91
+    ├── scm-cases
+    │   ├── BOMEX
+    │   │   ├── namelist.BOMEX
+    │   │   └── scm_in.BOMEX_137.nc
+    │   ├── DYCOMS
+    │   │   ├── namelist.DYCOMS
+    │   │   └── scm_in.DYCOMS_137.nc
+    │   └── TWPICE
+    │       ├── namelist.TWPICE
+    │       └── scm_in.TWPICE_137.nc
+    ├── scm-projects
+    │   └── ref48r1
+    │       └── plotscm.py
+    └── scm-utils
+
+9 directories, 72 files
