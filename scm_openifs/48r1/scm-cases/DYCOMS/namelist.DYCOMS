@@ -1,0 +1,98 @@
+ &NAM1C
+    ! SCM forcing options
+    NSTRTINI = 1,         ! Timestep relative to start of forcing data to start run
+                          ! Dynamical forcing options
+    LDYNFOR  = True,      !  T = turn on dynamical forcing
+    LVARFOR  = False,     !  T = use time-varying forcing, F = use initial profile for forcing
+    LUGVG    = True,      !  T = turn on geostrophic U,V wind (horizontal pressure gradient) forcing
+                          ! Vertical advection
+    LVERVEL  = True,      !  T = use vertical velocity for vertical advection (omega or etadot)
+    LETADOT  = False,     !  T = use etadot (dp/deta) for vertical advection, F = use omega
+    LUPWIND  = True,      !  T = use forward-in-time upwind differencing for vertical advection
+                          !  F = use Lax forward-in-time, centred-in-space for vertical advection
+    LWADV    = True,      !  T = turn on vertical advection of T,Q,U,V
+    LWADVCLD = False,     !  T = turn on vertical advection of cloud variables (cloud fraction/liquid/ice
+                          ! Horizontal advective tendencies
+    LTADV    = True,      !  T = turn on horizontal advection tendencies for temperature (T)
+    LQADV    = True,      !  T = turn on horizontal advection tendencies for humidity (Q)
+    LUVADV   = False,     !  T = turn on horizontal advection tendencies for wind (U,V)
+                          ! Surface forcing
+    LVARSST  = False,     !  T = use time-varying surface temperature (and lat/lon) from input file
+    LSFCFLX  = True,      !  T = use surface flux boundary condition (sensible,latent) from input file
+                          ! Relaxation
+    LRELAX   = False,     !  T = turn on relaxation to reference profile
+    RDTRELAX = 900,       !  relaxation timescale (seconds)
+    LUVREL   = False,     !  T = turn on relaxation for U,V
+    LTQREL   = False,     !  T = turn on relaxation for T,Q 
+    RUVREL_PLEV = 110000, !  only relax U,V above this pressure (Pa) (default=all)
+    RTQREL_PLEV = 69700,  !  only relax T,Q above this pressure (Pa) (default=all)
+                          ! Output info
+    OUTFORM  = 'netcdf',  !  SCM output format (netcdf or ascii)
+    CMODID   = '48r1',    !  SCM version identifier for output file metadata
+    CSIMID   = 'DYCOMS',  !  Simulation identifier for output file metadata
+/
+ &NAMRIP
+    ! Timestep info
+    TSTEP = 450.0,   ! timestep (seconds)
+    CSTOP = 'h72',   ! number of hours h***, days d***
+/
+ &NAEPHY
+    ! Physics parametrization options
+    LEPHYS  = True,  ! physics parametrizations (all on or all off)      
+    LERADI  = True,  ! radiation parametrization
+    LEVDIF  = True,  ! turbulent mixing parametrization
+    LECUMF  = True,  ! convection parametrization
+    LEPCLD  = True,  ! subgrid cloud and microphysics parametrization 
+    LESURF  = True,  ! land surface parametrization
+    LEFLAKE = True,  ! lake parametrization
+    LEGWDG  = True,  ! orographic gravity wave drag parametrization
+    LEGWWMS = True,  ! non-orographic gravity wave drag parametrization
+    LEMETHOX= True,  ! methane oxidation parametrization
+    LEQNGT  = True,  ! remove any negative humidities
+    LSLPHY  = False, ! semi-lagrangian averaging of slow physics tendencies
+    LBUD23  = True,  ! top-level budget diagnostics for T,Q,U,V+
+    LERADIMPL = False,
+/
+ &NAMDPHY
+    ! Output "extra" diagnostic fields dimensions
+    NVXTR2 = 0,      ! number of extra fields (single level)
+    NVEXTR = 99,     ! number of extra fields (profiles)
+    NCEXTR = 137,    ! number of levels for extra fields (profiles)
+/
+ &NAERAD
+    ! Radiation options
+    NRADFR  = 1,     ! frequency of full radiation calculations (+ve timesteps, -ve hours, default=-3)
+    NRADINT = 0,     ! (must =0 for SCM, no interp) radiation grid interpolation 
+    NRPROMA = -1,    ! (must =-1 for SCM) vector length for compuations 
+    LAER3D  = F,     ! T = use 3D aerosol fields in radiation (default=T)
+/
+ &NAMDIM
+    ! General dimensions
+    NFLEVG = 137,    ! number of vertical levels
+    NSMAX  = 799,    ! horizontal resolution (spectral trunction, affects convection in SCM)
+    NSTENCILWIDE =1, ! (must =1 for SCM) horizontal interpolation stencil width 
+    NPROMA = -1,     ! (must =-1 for SCM) dimension for horizontal grid vector length
+    NDGLG  = 1,      ! (must =1 for SCM) number of latitude rows
+    NDLON  = 1,      ! (must =1 for SCM) number of longitude rows 
+/
+ &NAMCT0
+    NFRPOS   = 1,    ! frequency of post-processing output (timesteps)
+    NUNDEFLD = 1,    ! (=1 for SCM to avoid unecessary bound checking failure)
+    LGRIB_API = False,
+/ 
+ &NAMARG
+    NSUPERSEDE = 0,
+/
+ &NAMCVER
+    LVERTFE = False, ! (default=True) has no impact in SCM but avoids unnecessary code
+    LREGETA = False, ! T = use regular eta coords for advection interpolation (default=F)
+/
+ &NAMDYNA
+    LSLAG   = True, ! T for semi-Lagrangian (vertical) advection, F for Euler
+    LTWOTL  = True, ! T = two time-level timestepping option (default=T)
+/
+ &NAMCLDP
+    LCLDBUD_TIMEINT = True, 
+/
+ &RADIATION
+/

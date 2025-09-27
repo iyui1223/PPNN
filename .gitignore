@@ -17,6 +17,9 @@ Viewer/
 
 # OpenIFS original files
 org/ 
+openifs-48r1/
+openifs-expt/
+scm-ancillary/
 
 # Hidden system files (Mac and Linux)
 .DS_Store
