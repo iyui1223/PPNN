@@ -29,7 +29,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: ./openifs-48r1/scripts/docker/gcc-docker-48r1.1
+          context: .
           file: ./openifs-48r1/scripts/docker/gcc-docker-48r1.1/Dockerfile
           push: true
           platforms: linux/amd64
